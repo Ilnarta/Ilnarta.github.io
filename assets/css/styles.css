@@ -112,7 +112,7 @@ img {
 
 /*=============== THEME ===============*/
 .change-theme{
-  font-size: 1.25rem;
+  font-size: 1.55rem;
   cursor: pointer;
   transition: .3s;
 }
@@ -264,6 +264,19 @@ body.light-theme{
 
 .nav__logo-img{
   width: 38px;
+}
+
+.nav__left-content{
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  gap: .75rem;
+}
+
+.change-lang{
+  width: 35px;
+  border-radius: .25rem;
 }
 
 .nav__menu {
