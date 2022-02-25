@@ -32,7 +32,8 @@
   --biggest-font-size: 3rem;
   --h1-font-size: 1.5rem;
   --h2-font-size: 1.25rem;
-  --h3-font-size: 1rem;
+  --h3-font-size: 1.25rem;
+  --h4-font-size: 1rem;
   --normal-font-size: .938rem;
   --small-font-size: .813rem;
   --smaller-font-size: .75rem;
@@ -54,7 +55,8 @@
     --biggest-font-size: 3.5rem;
     --h1-font-size: 2.25rem;
     --h2-font-size: 1.75rem;
-    --h3-font-size: 1.25rem;
+    --h3-font-size: 1.5rem;
+    --h4-font-size: 1.25rem;
     --normal-font-size: 1rem;
     --small-font-size: .875rem;
     --smaller-font-size: .813rem;
@@ -474,6 +476,108 @@ body.light-theme{
 .button-icon .bx {
   font-size: 1.4rem;
   font-weight: var(--font-medium);
+}
+
+/*=============== MODAL ===============*/
+.modal__icon{
+  font-size: 1rem;
+  transition: .4s;
+}
+
+.button-modal{
+  cursor: pointer;
+}
+
+.modal{
+  position: fixed;
+  inset: 0;
+  background-color: hsla(var(--second-hue), 28%, 16%, .7);
+  padding: 2rem 1rem;
+  display: grid;
+  place-items: center;
+  visibility: hidden;
+  opacity: 0;
+  transition: .4s;
+  z-index: var(--z-modal);
+}
+
+.modal-content{
+  position: relative;
+  background-color: var(--body-color);
+  padding: 1.5rem 2.5rem;
+  border-radius: 1.5rem;
+}
+
+.modal-title,
+.modal-description{
+  text-align: center;
+}
+
+.modal-title{
+  font-size: var(--h3-font-size);
+  color: var(--first-color);
+  margin-bottom: 1rem;
+}
+
+.modal-h4{
+  font-size: var(--h4-font-size);
+  color: var(--first-color);
+}
+
+.modal-description{
+  font-size: var(--small-font-size);
+  margin-bottom: 2rem;
+}
+
+.modal-list{
+  display: grid;
+  row-gap: 0.75rem;
+}
+
+.modal-item{
+  display: flex;
+  align-items: flex-start;
+  column-gap: .5rem;
+}
+
+.modal-icon{
+  font-size: 1.5rem;
+  color: var(--first-color);
+}
+
+.modal-info{
+  font-size: var(--small-font-size);
+}
+
+.modal-info a{
+  color: var(--first-color);
+}
+
+.modal-button{
+  display: flex;
+  row-gap: .5rem;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.modal-button a{
+  cursor: pointer;
+  text-align: center;
+}
+
+.modal-close{
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  font-size: 1.5rem;
+  color: var(--first-color);
+  cursor: pointer;
+}
+
+/*Active modal*/
+.active-modal{
+  opacity: 1;
+  visibility: visible;
 }
 
 /*=============== ABOUT ===============*/
@@ -960,6 +1064,10 @@ body.light-theme{
     padding: 1rem 1.5rem;
   }
 
+  .modal-title{
+    left: 20%;
+  }
+
   .home__buttons{
     flex-direction: column;
   }
@@ -1056,6 +1164,13 @@ body.light-theme{
 }
 
 @media screen and (min-width: 767px){
+  .modal-button{
+    display: flex;
+    column-gap: 1rem;
+    flex-direction: row;
+    justify-content: space-evenly;
+  }
+
   .about__img{
     width: 50%;
   }
