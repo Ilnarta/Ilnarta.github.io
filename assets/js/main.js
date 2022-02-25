@@ -27,6 +27,20 @@ modalClose.forEach((mc) =>{
     })
 })
 
+/*=============== MODAL ===============*/
+const ModalView = document.getElementById('modal'),
+    ModalBtns = document.querySelectorAll('.button-modal'),
+    ModalClose = document.querySelectorAll('.modal-close');
+function Modal() {
+    ModalView.classList.add('active-modal')
+}
+
+ModalBtns.forEach(mb => mb.addEventListener('click', Modal))
+
+ModalClose.forEach(mc => mc.addEventListener('click', () =>{
+    ModalView.classList.remove('active-modal')
+}))
+
 /*=============== MIXITUP FILTER PORTFOLIO ===============*/
 let mixer = mixitup('.work__container', {
     selectors: {
