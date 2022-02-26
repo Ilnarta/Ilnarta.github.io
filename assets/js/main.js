@@ -41,46 +41,46 @@ ModalClose.forEach(mc => mc.addEventListener('click', () =>{
     ModalView.classList.remove('active-modal')
 }))
 
-/*=============== MIXITUP FILTER PORTFOLIO ===============*/
-let mixer = mixitup('.work__container', {
-    selectors: {
-        target: '.work__card'
-    },
-    animation: {
-        duration: 300
-    }
-});
+// /*=============== MIXITUP FILTER PORTFOLIO ===============*/
+// let mixer = mixitup('.work__container', {
+//     selectors: {
+//         target: '.work__card'
+//     },
+//     animation: {
+//         duration: 300
+//     }
+// });
 
-/* Link active work */ 
-const linkWork = document.querySelectorAll('.work__item');
+// /* Link active work */ 
+// const linkWork = document.querySelectorAll('.work__item');
 
-function activeWork(){
-    linkWork.forEach(L=> L.classList.remove('active-work'))
-    this.classList.add('active-work')
-}
+// function activeWork(){
+//     linkWork.forEach(L=> L.classList.remove('active-work'))
+//     this.classList.add('active-work')
+// }
 
-linkWork.forEach(L=> L.addEventListener('click', activeWork))
+// linkWork.forEach(L=> L.addEventListener('click', activeWork))
 
 
-/*=============== SWIPER TESTIMONIAL ===============*/
-var swiperTestimonial = new Swiper(".testimonial__container", {
-    spaceBetween: 24,
-    loop: true,
-    grabCursor: true,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
-    breakpoints: {
-        576: {
-            slidesPerView: 2,
-        },
-        768: {
-            slidesPerView: 2,
-            spaceBetween: 48,
-        },
-    },
-});
+// /*=============== SWIPER TESTIMONIAL ===============*/
+// var swiperTestimonial = new Swiper(".testimonial__container", {
+//     spaceBetween: 24,
+//     loop: true,
+//     grabCursor: true,
+//     pagination: {
+//       el: ".swiper-pagination",
+//       clickable: true,
+//     },
+//     breakpoints: {
+//         576: {
+//             slidesPerView: 2,
+//         },
+//         768: {
+//             slidesPerView: 2,
+//             spaceBetween: 48,
+//         },
+//     },
+// });
 
 /*=============== SCROLL SECTIONS ACTIVE LINK ===============*/
 const sections = document.querySelectorAll('section[id]')
