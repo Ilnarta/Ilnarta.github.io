@@ -144,3 +144,45 @@ const sr = ScrollReveal({
 sr.reveal('.home__data')
 sr.reveal('.home__handle', {delay: 700})
 sr.reveal('.home__social', '.home__scroll', {delay: 900, origin: 'bottom'})
+
+/*=============== MESSAGE DISCORD WEBHOOK ===============*/
+function sendMessage() {
+    var request = new XMLHttpRequest();
+    var name = document.getElementById("name").value;
+    var mail = document.getElementById("mail").value;
+    var content = document.getElementById("content").value;
+
+    if (mail !== "" && content !== "") {
+        document.getElementById("name").value = "";
+        document.getElementById("mail").value = "";
+        document.getElementById("content").value = "";
+
+        request.open(
+            "POST",
+            "https://discord.com/api/webhooks/947440511503958026/EwfPnq3DHcOeC1omchB4KoXFaTUzAY094epLTNC_MSLtxUG0gW5m9KnGv_bSgRpPLgj1"
+        );
+
+        request.setRequestHeader("Content-type", "application/json");
+
+        var params = {
+            content:
+                "__**MESSAGE SITE WEB :**__\n**Discord ID / NameTag:**\n" +
+                name +
+                "\n\n**Mail:**\n" +
+                mail +
+                "\n\n**Content:**\n" +
+                content //test it now, i removed the value in this line it should work| Thanks
+        };
+
+        request.send(JSON.stringify(params));
+        document.getElementById("notice2").innerHTML =
+            "Message sent! / Message envoyé!";
+        document.getElementById("notice").innerHTML = "";
+        event.preventDefault();
+    } else {
+        event.preventDefault();
+        document.getElementById("notice2").innerHTML = "";
+        document.getElementById("notice").innerHTML =
+            "Missing Information / Informations manquantes";//change this to whatever you want to use
+    }
+  }

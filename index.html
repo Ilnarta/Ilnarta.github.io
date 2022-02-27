@@ -179,23 +179,25 @@
                     <div class="contact__content">
                         <h3 class="contact__title">Send us a message!</h3>
 
-                        <form action="" class="contact__form">
+                        <form class="contact__form">
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Names</label>
-                                <input type="text" placeholder="Insert your name" class="contact__form-input">
+                                <label for="name" class="contact__form-tag">Disccord ID / Discord nametag <span>(optional)</span></label>
+                                <input id="name" type="text" maxlength="50" placeholder="Insert your discord ID / Ilnarta#1789" class="contact__form-input">
                             </div>
 
                             <div class="contact__form-div">
-                                <label for="" class="contact__form-tag">Mail</label>
-                                <input type="text" placeholder="Insert your email" class="contact__form-input">
+                                <label for="mail" class="contact__form-tag">Mail</label>
+                                <input id="mail" type="text" maxlength="100" placeholder="Insert your email" class="contact__form-input">
                             </div>
 
                             <div class="contact__form-div contact__form-area">
-                                <label for="" class="contact__form-tag">Content</label>
-                                <textarea name="" id="" cols="30" rows="10" placeholder="Write your content" class="contact__form-input"></textarea>
+                                <label for="content" class="contact__form-tag">Content</label>
+                                <textarea id="content" cols="30" rows="10" maxlength="800" placeholder="Write your content" class="contact__form-input"></textarea>
                             </div>
 
-                            <button class="button">Send Message</button>
+                            <button class="button" onclick="sendMessage()">Send Message</button>
+                            <p id="notice2"></p>
+                            <p id="notice"></p>
                         </form>
                     </div>
                 </div>

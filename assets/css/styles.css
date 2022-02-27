@@ -733,6 +733,11 @@ body.light-theme{
   resize: none;
 }
 
+.contact__content span{
+  color: var(--first-color);
+  font-style: italic;
+}
+
 /*=============== FOOTER ===============*/
 .footer{
   background-color: var(--first-color);
